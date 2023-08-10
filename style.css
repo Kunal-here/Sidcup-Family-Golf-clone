@@ -474,7 +474,9 @@ video {
 
 
 @media (max-width: 920px) {
-      
+      body {
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    }
     
     .nav {
         padding: 0 20px;
