@@ -3,7 +3,6 @@
     padding: 0;
     box-sizing: border-box;
     color: white;
-    
     scroll-behavior: smooth;
 }
 
@@ -475,14 +474,17 @@ video {
 
 
 @media (max-width: 920px) {
-      body {
+    
+
+    body {
         font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     }
-    
     .nav {
         padding: 0 20px;
         justify-content: space-between;
     }
+
+    
 
     .hamburger {
         font-size: 3rem;
@@ -572,9 +574,13 @@ video {
       width: 90%;
       line-height: 30px;
     }
+
+    .green-div {
+        width: 100%;
+    }
   
     .green-div h4 {
-      width: 80%;
+      width: 100%;
     }
   
     .green-div img {
@@ -619,6 +625,14 @@ video {
     .second h2,
     .third h5 {
       font-size: 1.2rem;
+    }
+  }
+
+
+  @media screen and (max-width:500px){
+    .cursor,
+    .cursor-blur {
+        display: none;
     }
   }
   
