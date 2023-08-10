@@ -1,0 +1,622 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: white;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    width: 100%;
+    margin: 0;
+    overflow: hidden;
+}
+
+body::selection {
+    color: #119f3a;
+}
+
+
+.hamburger {
+    display: none;
+}
+
+
+.nav {
+    height: 135px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding-left: 3rem;
+    position: fixed;
+    justify-content: flex-start;
+    gap: 20px;
+    z-index: 99;
+    transition: .3s ease-in-out;
+}
+
+.nav li:hover {
+    color: #95C11E;
+}
+
+.nav ul {
+    display: flex;
+    gap: 20px;
+}
+
+.nav li {
+    list-style: none;
+    font-weight: 900;
+}
+
+.nav img, .footer img{
+    width: 75px;
+}
+
+video {
+    height: 100vh;
+    width: 100%;
+    object-fit: cover;
+    position: fixed;
+    z-index: -1;
+}
+
+.cursor {
+    height: 20px;
+    width: 20px;
+    background-color: #95C11E;
+    border-radius: 50%;
+    position: fixed;
+    z-index: 99;
+}
+
+.cursor-blur {
+    height: 14rem;
+    width: 14rem;
+    background-color: #96c11e7b;
+    border-radius: 50%;
+    position: fixed;
+    z-index: 99;
+    filter: blur(100px);
+    z-index: 9;
+    
+}
+
+.main {
+    width: 100%;
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.584);
+}
+
+.page1 {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 90%;
+    margin: 0 auto;
+    gap: 10px;
+    z-index: 10;
+    position: relative;
+}
+
+.page1 #arrow {
+    height: 12rem;
+    width: 12rem;
+    border-radius: 50%;
+    background-color: transparent;
+    border: 4px solid #95C11E;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3.5rem;
+    position: absolute;
+    z-index: 9;
+    bottom: 3%;
+    left: -8%;
+    transition: all linear .4s;
+}
+
+.page1 #arrow:hover {
+    scale: 0.5;
+    background-color: #95C11E;
+    color: black;
+} 
+
+.page1 h1 {
+    font-size: 5rem;
+    font-weight: 800;
+    letter-spacing: 5px;
+    position: relative;
+    
+}
+
+.page1 h1::before {
+    content: "EAT. DRINK. PLAY.";
+    position: absolute;
+    color: black;
+    top: -0.2rem;
+    left: -0.3rem;
+    z-index: -1;
+    -webkit-text-stroke:2px #95C11E;
+}
+
+
+
+.page1 h4 {
+    font-size: 1.2rem;
+}
+
+.page1 p {
+    font-size: 0.9rem;
+    text-align: center;
+    width: 50%;
+}
+
+.page2 {
+    width: 100%;
+    min-height: 100vh;
+    padding-top: 5rem;
+    z-index: 10;
+}
+
+.scroller {
+    white-space: nowrap;
+    position: relative;
+    overflow-x: auto;
+    overflow-y: hidden;
+    position: relative;
+    z-index: 10;
+}
+
+.scroller::-webkit-scrollbar {
+    display: none;
+}
+
+.scroller-in {
+    display: inline-block;
+    white-space: nowrap;
+    animation: scroll;
+    animation-duration: 25s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+
+}
+
+.scroller h4 {
+    display: inline-block;
+    font-size: 7rem;
+    font-weight: bolder;
+    margin-right: 1rem;
+    color: transparent;
+    transition: all linear 0.4s;
+    -webkit-text-stroke: 2px #95C11E;
+}
+
+.scroller h4:hover {
+    color: #95C11E;
+}
+
+@keyframes scroll {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+
+.aboutUs {
+    padding: 5rem 2.5rem;
+    display: flex;
+    position: relative;
+    z-index: 10;
+    justify-content: space-between;
+}
+
+.aboutUs img {
+    width: 15%;
+    border-radius: 15px;
+    object-fit: cover;
+}
+
+.aboutUs-text {
+    width: 50%;
+    text-align: center;
+}
+
+.aboutUs-text h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.aboutUs-text p {
+    letter-spacing: 1px;
+}
+
+.card-container {
+    height: 60vh;
+    display: flex;
+    align-items: center;
+    position: relative;
+    z-index: 10;
+    justify-content: center;
+    gap: 3rem;
+}
+
+.card {
+    overflow: hidden;
+    height: 75%;
+    width: 25%;
+    border-radius: 15px;
+    background-size: cover;
+    background-position: center;
+    transition: all ease 0.6s;
+}
+
+#card1 {
+    background-image: url(https://raw.githubusercontent.com/saarthack/sidcup-family-golf/main/Assests/card1.avif);
+}
+
+#card2 {
+    background-image: url(https://raw.githubusercontent.com/saarthack/sidcup-family-golf/main/Assests/card2.webp);
+}
+
+#card3 {
+    background-image: url(https://raw.githubusercontent.com/saarthack/sidcup-family-golf/main/Assests/card3.avif);
+}
+
+.overlay {
+    height: 100%;
+    background-color: #95C11E;
+    padding: 2.5rem;
+    opacity: 0;
+    transition: all ease 0.6s;
+}
+
+.card:hover .overlay {
+    opacity: 1;
+}
+
+.card:hover {
+    transform: scale(1.1);
+    transform: rotate3d(-1,1,0,20deg);
+}
+
+.overlay h4, .overlay p {
+    color: black;
+    text-align: center;
+}
+
+.overlay h4 {
+    font-size: 1.7em;
+    font-weight: 800;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+}
+
+.green-div {
+    height: 30vh;
+    display: flex;
+    align-items: center;
+    background: linear-gradient(to left bottom,#119f3a, #ACE022);
+    justify-content: space-between;
+}
+
+.green-div h4 {
+    width: 40%;
+    color: black;
+    font-weight: 900;
+    letter-spacing: 0.8px;
+    text-align: center;
+    font-size: 1.3rem;
+}
+
+.green-div img{
+    height: 100%;
+    object-fit: cover;
+    width: 18%;
+}
+
+#img1 {
+    transform: rotate(180deg);
+}
+
+.page3 {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+    position: relative;
+}
+
+.page3 p {
+    font-size: 2rem;
+    font-family: 700;
+    width: 65%;
+    line-height: 40px;
+    text-align: center;
+}
+
+#colon1 , #colon2 {
+    width: 4%;
+    position: absolute;
+}
+
+.page3 #colon1 {
+    top: 25%;
+    left: 15%;
+}
+
+.page3 #colon2 {
+    bottom: 24%;
+    right: 15%;
+}
+
+.page4 {
+   height: 30vh; 
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   gap: 3rem;
+   position: relative;
+   background-color: black;
+}
+
+.page4 h1 {
+    text-align: center;
+}
+
+.elem {
+    width: 26%;
+    height: 70%;
+    overflow: hidden;
+    border-radius: 25px;
+    position: relative;
+}
+
+.elem h2 {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    font-weight: 900;
+    color: black;
+    position: absolute;
+    z-index: 9;
+    background-color: #95C11E;
+    transition: all ease-in .4s;
+}
+
+.elem img {
+    height: 100%;
+    width: 100%;
+    scale: 1.1;
+    object-fit: cover;
+    transition: all ease-in .4s;
+}
+
+.elem:hover h2 {
+    color: white;
+    background-color: transparent;
+}
+
+.elem:hover img {
+    scale: 1;
+}
+
+.page4 h1 {
+    position: absolute;
+    top: -12%;
+    font-weight: bolder;
+    font-size: 4.5rem;
+    color: black;
+    -webkit-text-stroke: 2px #fff;
+}
+
+.footer {
+    position: relative;
+}
+
+.innerFooter {
+    height: 100%;
+    padding: 6rem;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 7rem;
+    position: relative;
+    z-index: 9;
+    padding-left: 8rem;
+    letter-spacing: 0.5px;
+    background: linear-gradient(to left bottom, #119f3a, #95C11E );
+}
+
+.first h2,
+.second h2,
+.third h5{
+    transition: all ease .2s;
+    color: black;
+} 
+
+#footerImg {
+    position: absolute;
+    left: -3%;
+    z-index: 10;
+    height: 100%;
+    width: 10%;
+    transform: rotate(180deg);
+}
+
+.first h2,
+.second h2 {
+    font-weight: 900;
+}
+
+.third h5 {
+    font-weight: 500;
+}
+
+.first h2:hover,
+.second h2:hover,
+.third h5:hover{
+    color: white;
+} 
+
+
+
+@media (max-width: 920px) {
+      
+    
+    .nav {
+        padding: 0 20px;
+        justify-content: space-between;
+    }
+
+    .hamburger {
+        font-size: 3rem;
+        display: flex;
+    }
+
+    .nav ul {
+        display: none;
+    }
+
+    ul.hamActive {
+        display: flex;
+        flex-direction: column;
+        top: 80%;
+        height: 100vh;
+        gap: 50px;
+        color: black;
+        background: linear-gradient(to bottom,#000000, #1c3b25);
+        position: absolute;
+        padding: 3rem;
+        left: 0%;
+        text-align: center;
+        width: 100%;
+        transform: translateY(200%);
+        transition: 0.8s ease-in-out; 
+    }
+    
+    ul.visible {
+        transform: translateY(0); 
+    }
+
+
+    .page1 #arrow {
+        height: 8.5rem;
+        width: 8.5rem;
+        font-size: 3rem;
+    }
+
+    .page1 {
+      text-align: center;
+      padding: 5rem 2.5rem;
+    }
+
+
+  
+    .aboutUs {
+      flex-direction: column;
+      padding: 2rem;
+      gap: 20px;
+      justify-content: center;
+      align-items: center;
+    }
+  
+    .aboutUs img {
+      width: 60%;
+      margin-bottom: 2rem;
+    }
+  
+    .aboutUs-text {
+      text-align: center;
+      width: 80%;
+      margin-bottom: 1rem;
+    }
+  
+    .card-container {
+      flex-direction: column;
+      gap: 2rem;
+      height: auto;
+      gap: 30px;
+      margin-bottom: 1rem;
+    }
+  
+    .card {
+      width: 80%;
+      height: 400px;
+      background-size: cover;
+      background-position: center;
+      transform: none;
+    }
+  
+    .overlay {
+      padding: 1rem;
+    }
+  
+    .page3 p {
+      font-size: 1.5rem;
+      width: 90%;
+      line-height: 30px;
+    }
+  
+    .green-div h4 {
+      width: 80%;
+    }
+  
+    .green-div img {
+      width: 25%;
+    }
+  
+    .page4 {
+      flex-direction: column;
+      height: 1000px;
+      gap: 2rem;
+      padding: 2rem;
+      text-align: center;
+    }
+  
+    .elem {
+      width: 100%;
+      height: auto;
+      overflow: hidden;
+      border-radius: 15px;
+    }
+  
+    .elem h2 {
+      font-size: 1.5rem;
+    }
+  
+  
+  
+    #footerImg {
+      left: -10%;
+      width: 25%;
+    }
+  
+    .innerFooter {
+        width: 100%;
+      flex-direction: column;
+      gap: 3rem;
+      padding: 1rem;
+      text-align: center;
+    }
+  
+    .first h2,
+    .second h2,
+    .third h5 {
+      font-size: 1.2rem;
+    }
+  }
+  
