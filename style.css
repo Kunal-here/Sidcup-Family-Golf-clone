@@ -607,8 +607,10 @@ video {
     }
     
     .page4 h1 {
-        top: -20%;
+        font-size: 4rem;
+        top: -15%;
     }
+    
   
     #footerImg {
       left: -10%;
